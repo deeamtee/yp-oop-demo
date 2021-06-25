@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="stylesheet" href="style/index.css" />
+  </head>
+
+  <body>
+    <!-- https://www.figma.com/file/vV3g5ufRrsQJmvyJGCXRfR/TODO?node-id=0%3A1 -->
+    <div class="page">
+      <section class="todo">
+        <h1>Todo List</h1>
+        <form id="todo-form" class="todo-form">
+          <input type="text" name="text" class="todo-form_input" />
+          <button type="submit" class="todo-form_submit">Сохранить</button>
+        </form>
+        <ul id="todolist" class="todolist"></ul>
+      </section>
+    </div>
+
+    <template id="todolist-item-template" style="display: none">
+      <li class="todolist-item">
+        <span class="todolist-item__text">Текст задачи</span>
+        <button class="todolist-item__copy"></button>
+        <button class="todolist-item__del"></button>
+      </li>
+    </template>
+    <script type="module" src="scripts/index.js"></script>
+  </body>
+</html>
